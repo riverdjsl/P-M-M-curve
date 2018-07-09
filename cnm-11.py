@@ -280,7 +280,6 @@ def possible_range(axes_num, FA):
 			ro = 0
 	else:
 		ro = 0
-#		r_range = range_input()
 		r_range = 90
 	return [ro, r_range]
 
@@ -299,7 +298,6 @@ def curve3(AN, plt3D=False):
 
 	major = possible_range(axes_num, FA)[0]
 	r_range = possible_range(axes_num, FA)[1]
-#	r_range = 45
 	NR = []
 	MXR = []
 	MYR = []
