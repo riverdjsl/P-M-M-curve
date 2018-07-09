@@ -479,7 +479,7 @@ def plot_2D(curve_AN):
 
 	plt.show()
 
-
+'''
 def plot_3D():
 	try:
 		range_need = int(360/(2*axes_num))
@@ -489,7 +489,7 @@ def plot_3D():
 		print(j)
 		data = curve3(j, plt3D=True)
 	plt.show()
-
+'''
 
 def plot_3D2():
 
