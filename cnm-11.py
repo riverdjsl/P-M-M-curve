@@ -248,7 +248,7 @@ def outpath(note):
 		except Exception:
 			print("errors, try again!")
 
-
+'''
 def range_input():
 	while True:
 		try:
@@ -262,7 +262,7 @@ def range_input():
 			print("numbers only!")
 		else:
 			return rng
-
+'''
 
 def possible_range(axes_num, FA):
 	note = "you must assign a searching range now."
