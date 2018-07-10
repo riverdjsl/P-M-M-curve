@@ -30,7 +30,7 @@ class Readfile():
 		s.forces = {}
 		with open(f) as s.f:
 			for i in s.f.readlines():
-				s.data[trans_comma_str(i)[1]] = [float(i) for i in trans_comma_str(i)[-4:]]			
+				s.data[trans_comma_str(i)[1]] = [float(i) for i in trans_comma_str(i)[-4:]]
 			s.f.close()
 		for i, j in s.data.items():
 			try:
@@ -222,10 +222,25 @@ def forceformattedout(forcepairs):
 		y = mx/n
 	except ZeroDivisionError:
 		y = 9999
-	try:
-		thitar = np.arctan(x/y)*180/np.pi
-	except ZeroDivisionError:
-		thitar = 90
+
+	if (x > 0) and (y >= 0):
+		try:
+			thitar = np.arctan(x/y)*180/np.pi
+		except ZeroDivisionError:
+			thitar = 90
+	elif (x >= 0) and (y < 0):
+		try:
+			thitar = np.arctan(y/x)*180/np.pi+90
+		except ZeroDivisionError:
+			thitar = 180
+	elif (x < 0) and (y <= 0):
+		try:
+			thitar = np.arctan(x/y)*180/np.pi+180
+		except ZeroDivisionError:
+			thitar = 270
+	elif  (x <= 0) and (y > 0):
+		thitar =360-np.arctan(x/y)*180/np.pi
+
 	length = (x**2+y**2)**0.5
 	m3 = n*length
 	print('{:.1f},{:.1f},{:.1f},{:.1f},{:.1f},'.format(thitar, n, mx, my, m3), file=fout2)
