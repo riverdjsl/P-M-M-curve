@@ -230,7 +230,7 @@ def forceformattedout(forcepairs):
 			thitar = 90
 	elif (x >= 0) and (y < 0):
 		try:
-			thitar = np.arctan(y/x)*180/np.pi+90
+			thitar = -np.arctan(y/x)*180/np.pi+90
 		except ZeroDivisionError:
 			thitar = 180
 	elif (x < 0) and (y <= 0):
@@ -239,7 +239,7 @@ def forceformattedout(forcepairs):
 		except ZeroDivisionError:
 			thitar = 270
 	elif  (x <= 0) and (y > 0):
-		thitar =360-np.arctan(x/y)*180/np.pi
+		thitar =360+np.arctan(x/y)*180/np.pi
 
 	length = (x**2+y**2)**0.5
 	m3 = n*length
