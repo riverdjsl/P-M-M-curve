@@ -53,12 +53,12 @@ for i in [a_s, h-a_s]:
 		f.write('2,{:.1f},{:.1f},{:.1f},'.format(c_r_a, i, j))
 		f.write("\n")
 
-for i in [k*r_sp_b+a_s for k in range(int(b_r_n)+1)]:
+for i in [(k+1)*r_sp_b+a_s for k in range(int(b_r_n))]:
 	for j in [a_s, h-a_s]:
 		f.write('2,{:.1f},{:.1f},{:.1f},'.format(b_r_a, i, j))
 		f.write("\n")
 
-for i in [k*r_sp_h+a_s for k in range(int(h_r_n)+1)]:
+for i in [(k+1)*r_sp_h+a_s for k in range(int(h_r_n))]:
 	for j in [a_s, b-a_s]:
 		f.write('2,{:.1f},{:.1f},{:.1f},'.format(h_r_a, j, i))
 		f.write("\n")
