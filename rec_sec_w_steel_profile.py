@@ -50,7 +50,7 @@ for i in [k*ele_b+ele_b/2 for k in range(int(element_num))]:
 
 for i in [a_s, h-a_s]:
 	for j in [a_s, b-a_s]:
-		f.write('2,{:.1f},{:.1f},{:.1f},'.format(c_r_a, i, j))
+		f.write('2,{:.1f},{:.1f},{:.1f},'.format(c_r_a, j, i))
 		f.write("\n")
 
 for i in [(k+1)*r_sp_b+a_s for k in range(int(b_r_n))]:
