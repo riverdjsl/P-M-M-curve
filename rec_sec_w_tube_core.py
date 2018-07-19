@@ -35,7 +35,7 @@ hs = hs-tw
 els_s_h = hs/eles_num
 els_s_b = bs/eles_num
 
-f = open("rec_sec_with_steel.txt", "w")
+f = open("rec_sec_w_tube.txt", "w")
 f.write("30,")
 f.write("\n")
 f.write("200000, 360, -0.01,")
